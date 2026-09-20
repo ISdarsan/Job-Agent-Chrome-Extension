@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job Agent Field Detection Test</title>
+  <style>
+    :root { color: #172236; background: #f7f8fb; font: 16px/1.45 system-ui, sans-serif; }
+    body { max-width: 760px; margin: 0 auto; padding: 32px 20px 60px; }
+    h1 { margin-bottom: 6px; }
+    p { color: #718096; }
+    form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; padding: 24px; background: white; border: 1px solid #e4e8ef; border-radius: 12px; }
+    label { display: grid; gap: 6px; font-size: 13px; font-weight: 650; }
+    input, textarea, select { min-height: 38px; box-sizing: border-box; padding: 8px 10px; border: 1px solid #d8deea; border-radius: 7px; font: inherit; }
+    textarea { min-height: 72px; }
+    .wide { grid-column: 1 / -1; }
+    @media (max-width: 560px) { form { grid-template-columns: 1fr; } .wide { grid-column: auto; } }
+  </style>
+</head>
+<body>
+  <h1>Job Agent Field Detection Test</h1>
+  <p>Open the extension side panel and request a scan from the extension console. This page contains clear and intentionally ambiguous fields.</p>
+  <form>
+    <label for="first_name">First Name<input id="first_name" name="first_name" autocomplete="given-name"></label>
+    <label for="last_name">Last Name<input id="last_name" name="last_name" autocomplete="family-name"></label>
+    <label for="full_name">Full Name<input id="full_name" name="full_name"></label>
+    <label for="email">Email Address<input id="email" name="candidate_email" type="email" placeholder="E-mail"></label>
+    <label for="mobile">Mobile Number<input id="mobile" name="mobile_number" type="tel"></label>
+    <label for="date_of_birth">Date of Birth<input id="date_of_birth" name="date_of_birth" type="date"></label>
+    <label class="wide" for="address">Address<textarea id="address" name="street_address"></textarea></label>
+    <label for="city">City<input id="city" name="city"></label>
+    <label for="state">State<input id="state" name="state"></label>
+    <label for="country">Country<select id="country" name="country"><option value="">Choose country</option></select></label>
+    <label for="postal_code">Postal Code<input id="postal_code" name="postal_code"></label>
+    <label for="linkedin">LinkedIn Profile<input id="linkedin" name="linkedin_url" type="url"></label>
+    <label for="github">GitHub Profile<input id="github" name="github_url" type="url"></label>
+    <label for="portfolio">Portfolio<input id="portfolio" name="portfolio_url" type="url"></label>
+    <label for="degree">Degree<input id="degree" name="degree"></label>
+    <label for="college">College<input id="college" name="college"></label>
+    <label for="university">University<input id="university" name="university"></label>
+    <label for="graduation_year">Graduation Year<input id="graduation_year" name="graduation_year" type="number"></label>
+    <label for="cgpa">CGPA<input id="cgpa" name="cgpa" type="number"></label>
+    <label for="username">Username<input id="username" name="username"></label>
+    <label for="reference">Reference<input id="reference" name="reference"></label>
+    <label class="wide" for="other_information">Other Information<textarea id="other_information" name="other_information"></textarea></label>
+  </form>
+</body>
+</html>
