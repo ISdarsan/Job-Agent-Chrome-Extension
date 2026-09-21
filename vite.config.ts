@@ -12,7 +12,7 @@ const manifest = {
   },
   content_scripts: [
     {
-      matches: ['<all_urls>'],
+      matches: ['http://*/*', 'https://*/*'],
       js: ['src/content/content.ts'],
       run_at: 'document_idle'
     }
@@ -23,15 +23,8 @@ const manifest = {
   side_panel: {
     default_path: 'index.html'
   },
-  permissions: [
-    'sidePanel',
-    'storage',
-    'activeTab',
-    'scripting'
-  ],
-  host_permissions: [
-    '<all_urls>'
-  ]
+  permissions: ['tabs', 'sidePanel', 'storage'],
+  host_permissions: ['http://*/*', 'https://*/*']
 }
 
 export default defineConfig({

@@ -12,6 +12,7 @@ const textSignals: Array<{ fieldType: Exclude<FieldType, 'unknown'>; terms: stri
   { fieldType: 'phone', terms: ['phone', 'mobile', 'telephone', 'cell number'], weight: 0.58, source: 'text' },
   { fieldType: 'firstName', terms: ['first name', 'given name', 'forename'], weight: 0.62, source: 'text' },
   { fieldType: 'lastName', terms: ['last name', 'family name', 'surname'], weight: 0.62, source: 'text' },
+  { fieldType: 'fullName', terms: ['full name', 'fullname', 'candidate name', 'complete name', 'legal name'], weight: 0.62, source: 'text' },
   { fieldType: 'fullName', terms: ['full name', 'name'], weight: 0.3, source: 'text' },
   { fieldType: 'dateOfBirth', terms: ['date of birth', 'birth date', 'birthday', 'dob'], weight: 0.7, source: 'text' },
   { fieldType: 'address', terms: ['address', 'street address', 'address line'], weight: 0.62, source: 'text' },

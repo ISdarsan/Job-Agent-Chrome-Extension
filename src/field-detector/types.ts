@@ -20,7 +20,7 @@ export interface FieldDetection {
 }
 
 export interface ScanPageRequest {
-  type: 'scan-page'
+  type: 'SCAN_PAGE'
 }
 
 export interface ScanPageResponse {
